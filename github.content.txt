@@ -1,0 +1,52 @@
+Concepts to inclulde in github pages  (5 or 6 pages, so keep it brief)
+
+Introduction: I have a PhD in astronomy, other basic info about that
+	      studying diff rot, which relates to magnetic fields 
+	      include cartoon, Eq. 3.5
+	      my project was special because:
+	        it covered more stars than anyone else
+		established a link between rot and diff rot
+		used innovative methods (the obs, the model, etc)
+		explored these methods to push modeling to a new level
+	      (Include results here?)
+
+Observations: Project had two types of observations
+	       spectra (done by me)
+	       photometry (done by NASA)
+	      The spectra tells me about a star's composition and rotation
+	      I can use this information to determine a star's i
+	      Eq. 2.2 and Fig. 2.2
+
+	      Photometry tells me about a star's rotation and depending
+	      on the model a great deal of other information.
+	      (Talk about Kepler for like 2 sentences, this leads to model)
+	      Lightcurves, what are they, what are they used for, etc...
+	      What causes the variations (spots, some LC fig.)
+
+Model: The model takes a Kepler LC and determines the parameters of 
+       the spots which cause the variations.  This info can be used
+       to determine the star's diff rot.
+       One thing I did was to remove latitude from the model
+        this helped to break a degeneracy which causes other astronomers
+	problems.  Eq. 3.6
+       Aside: other ways of describing diff rot (Eqs. 3.7 and 3.8)
+
+       Least Squares Fitting, Eq. 3.9, I make a LC and compare with 
+        the real one.  In total this is done 2,500,000 times per
+	CL.  For all LCs (1429) this comes to over 3.5 billion models.
+       Need something fast to make this work.
+       GA and parallelization are the answers
+       Parallelization simply allows the model to run on multiple cores
+
+GA interlude: (Basically all of 3.3.1)
+
+Other Notes:  Synodic periods can be use to predict and verify the
+      	      determined spot periods. Eq. 3.11, Fig. 3.1?
+	      These periods were determined using Lomb-Scargle which
+	      uses a sinusoidal fit to a lightcurve's harmonic content
+
+	      The model was extensively tested to examine how it would
+	      behave when confronted with realistic LCs and unusual LCs.
+	      The model includes various assumptions and simplifications
+	      but the testing indicates that the model is still accurate.
+	      (List some of the results?)

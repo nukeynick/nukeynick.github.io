@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Observations Page">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Observations</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/nukeynick">View on GitHub</a>
+
+          <h1 id="project_title">Observations</h1>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="intro" class="anchor" href="#intro" aria-hidden="true"><span class="octicon octicon-link"></span></a>Observation Overview</h3>
+
+<p>
+Like all good astronomers I used telescopes to collect data and to learn specific information about the stars I was modeling.
+Most of the data in this project came from NASA's <i>Kepler</i> mission which is a 0.95 meter telescope in an Earth trailing orbit.
+It is most famous for discovering hundreds of new planets but is also a phenomenal instrument for studying stars as it gave astronomers 4 years of continuous coverage on hundreds of thousands of stars.
+The data from <i>Kepler</i> comes to us in the form of lightcurves, as seen below, this is simply a measure of a star's brightness and how it changes of time.
+The model I developed is designed to reproduce the changes in a lightcurve by recreating the physical structures on a star's surface.
+This is accomplished by modeling dark spots on a star which rotate in and out of view as time passes.
+Each of these spot's have four modeled parameters: Latitude, Longitude, Rotational Period, and Size.
+From the latitudes and rotational periods of the spots I can determine the differential rotation of a star which is the whole point of all this!
+I'll elaborate on how the model works later on.
+</p>
+
+<img src="/images/KeplerLC.png" alt="hi" class="inline"/>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>

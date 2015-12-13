@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Model Page">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Model: spotz</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/nukeynick">View on GitHub</a>
+
+          <h1 id="project_title">Model: spotz</h1>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a id="modelH" class="anchor" href="#modelH" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model History</h2>
+
+<p>
+There is a fair amount of history behind the model used for my thesis.
+It was originally developed out of the equations from a binary star model by English astronomers in 1977.
+A group of Hungarian astronomers worked with the model in 1990s which culminated with the publically available SpotModeL in 2003.
+Before this work the last improvement was in 2006 by American astronomers which produced StarSpotz.
+I picked up the work in 2010 and developed it into <em>spotz</em>.
+</p>
+
+<a id="modelV" class="anchor" href="#modelV" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model Variables</h2>
+
+<p>
+The basic function of <em>spotz</em> is to take a <em>Kepler</em> lightcurve and return the parameters of the dark spots needed to produce the variations in the lightcurve.
+An individual spot can be modeled with radius, longitude, latitude, and rotaional period.
+The model also uses other input variables which I could solve for using other methods:
+<OL>
+<LI>Stellar Radius: determined from standard stellar models and the spectral classification.</LI>
+<LI>Equatorial Period: determined from signal analysis of the lightcurve prior to modeling.</LI>
+<LI>Peak Flux: determined during the target selection period.</LI>
+<LI>Inclination: derived from the spectra
+</OL>
+There are two other variables, limb darkening coefficient and spot flux ratio, which are constant across all stars.
+</p>
+
+
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>

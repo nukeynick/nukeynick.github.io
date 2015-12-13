@@ -1,5 +1,7 @@
 UPDATING IMAGE FOLDER!!
 -----------------------
+$git pull
+
 $git add -A
 
 $(git status)
@@ -8,7 +10,6 @@ $git commit -m "abcdefg"
 
 $git push
 
-Sometimes a git pull is needed
 -----------------------
 
 WEBPAGE STUFF

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Model Page">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Genetic Algorithms</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/nukeynick">View on GitHub</a>
+
+          <h1 id="project_title">Geneitc Algorithms</h1>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+<!--
+  <h2>
+<a id="GA class="anchor" href="#GA" aria-hidden="true"><span class="octicon octicon-link"></span></a>GA Overview</h2>
+-->
+
+<p>
+A genetic algorithm operates similarly to the evolutionary development of organisms: a population is judged based on its fitness and the best members are allowed to breed and create a new population.
+The new population is then judged by some benchmark (least-squares fitting) and the most fit members (lowest &#967;<sup>2</sup> value) are retained while the rest are discarded.
+This cycle is repeated until it converges on a predefined measure of fitness or until a predetermined number of generations is reached.
+Genetic algorithms also utilize the fitness of a parent member in the selection process for new members, meaning model results with low &#967;<sup>2</sup> are better at exploring the local parameter space.
+So an unfit parent will select new members further away in parameter space than a fit parent will.
+A brief outline of the method follows:
+</p>
+<OL TYPE="1">
+<LI>Construct a random initial population</LI>
+<LI>Evaluate the fitness of each member</LI>
+<LI>Select the best members of the population</LI>
+<LI>Allow these members to asexually breed a new generation</LI>
+<LI>Repeat the process (from step 2)</LI>
+<LI>Stop the process when N generations have passed</LI>
+</OL>
+
+<p>
+For my thesis the <em>spotz</em> model employed 200 generations and 250 population members and only the top 10&#37; were retained between generations.
+</p>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>

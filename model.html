@@ -37,7 +37,7 @@ Before this work the last improvement was in 2006 by American astronomers which 
 I picked up the work in 2010 and developed it into <em>spotz</em>.
 </p>
 
-<a id="modelV" class="anchor" href="#modelV" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model Variables</h2>
+<h3><a id="modelV" class="anchor" href="#modelV" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model Variables</h3>
 
 <p>
 The basic function of <em>spotz</em> is to take a <em>Kepler</em> lightcurve and return the parameters of the dark spots needed to produce the variations in the lightcurve.
@@ -52,7 +52,25 @@ The model also uses other input variables which I could solve for using other me
 There are two other variables, limb darkening coefficient and spot flux ratio, which are constant across all stars.
 </p>
 
+<h4><a id="Drot" class="anchor" href="#Drot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Differential Rotation</h4>
 
+<p>
+During the model's testing phase it was noted that the model struggles when trying to find the latitude for the spots.
+There is a degeneracy between the latitude and inclination and despite my ability to determine inclination, there is still uncertainty in that measurement.
+The solution is to run the model with differential rotation (<em>k</em>) set beforehand, and then run several models with different values of <em>k</em>.
+Latitude is still calculated because it is related to the spot peroid and differential rotation, as seen below (note that &beta is latitude).
+</p>
+
+<div style="text-align: center;"><img src="http://latex.codecogs.com/svg.latex?\beta = sin^{-1}\sqrt{(1-\frac{P_{EQ}}{P_{\beta}})\frac{1}{k}}" alt="diff rot" border="0"/></div>
+
+<p>
+While removing a variable from the model does increase the run time for a single simulation it does require more models to be run.
+Many other astronomers prefer to describe differential rotation is by comparing the angular velocities (&Omega) at the poles and equator.
+Where &Omega = 2&pi / 2.
+Because of this I sometimes have my differential rotation equations written in this format.
+</p>
+
+<div style="text-align: center;"><img src="http://latex.codecogs.com/svg.latex?\Omega%28\theta%29%20=%20\Omega_{EQ}%281%20-%20k\sin^2\theta%29" alt="omega" border="0"/></div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">

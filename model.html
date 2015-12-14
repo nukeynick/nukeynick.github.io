@@ -58,7 +58,7 @@ There are two other variables, limb darkening coefficient and spot flux ratio, w
 During the model's testing phase it was noted that the model struggles when trying to find the latitude for the spots.
 There is a degeneracy between the latitude and inclination and despite my ability to determine inclination, there is still uncertainty in that measurement.
 The solution is to run the model with differential rotation (<em>k</em>) set beforehand, and then run several models with different values of <em>k</em>.
-Latitude is still calculated because it is related to the spot peroid and differential rotation, as seen below (note that &beta is latitude).
+Latitude is still calculated because it is related to the spot peroid and differential rotation, as seen below (note that &#946; is latitude).
 </p>
 
 <div style="text-align: center;"><img src="http://latex.codecogs.com/svg.latex?\beta = sin^{-1}\sqrt{(1-\frac{P_{EQ}}{P_{\beta}})\frac{1}{k}}" alt="diff rot" border="0"/></div>
@@ -68,6 +68,21 @@ While removing a variable from the model does increase the run time for a single
 Many other astronomers prefer to describe differential rotation is by comparing the angular velocities (&#937;) at the poles and equator.
 Where &#937; = 2&#960; / 2.
 Because of this I sometimes have my differential rotation equations written in this format.
+</p>
+
+<h5><a id="LSQ" class="anchor" href="#LSQ" aria-hidden="true"><span class="octicon octicon-link"></span></a>Least Squares Fitting</h5>
+
+<p>
+The basic function of the model is to reproduce a star's lightcurve by fitting various parameters and comparing the simulated lightcurve to the real one.
+The comparison is done with nonlinear least squares algorithm and it finds a good fit by minimizing the sum of squared residuals between the data and the model.
+</p>
+
+<div style="text-align: center;"><img src="http://latex.codecogs.com/svg.latex?\chi^2%20=%20\sum_{i=1}^N%20\frac{%28I_{o_i}%20-%20I_{c_i}%29^2}{%28\Delta%20I_{o_i}%29^2}" alt="LSQ" border="0"/></div>
+
+<p>
+Each time a new model is created one of these comparisons is made a &#967;<sup>2</sup> is determined with lower values signalling a better fit.
+Where a model with a good fit to the data has spot parameters which are most likely to represent the actual structures on the star.
+The model finds better solutions to the data by using a genetic algorithm.
 </p>
 
 <div style="text-align: center;"><img src="http://latex.codecogs.com/svg.latex?\Omega%28\theta%29%20=%20\Omega_{EQ}%281%20-%20k\sin^2\theta%29" alt="omega" border="0"/></div>

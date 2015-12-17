@@ -40,7 +40,7 @@ I picked up the work in 2010 and developed it into <em>spotz</em>.
 <h3><a id="modelV" class="anchor" href="#modelV" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model Variables</h3>
 
 <p>
-The basic function of <em>spotz</em> is to take a <em>Kepler</em> lightcurve and return the parameters of the dark spots needed to produce the variations in the lightcurve.
+The basic function of <em>spotz</em> is to take a <em>Kepler</em> <a href="/observations.html">lightcurve</a> and return the parameters of the dark spots needed to produce the variations in the lightcurve.
 An individual spot can be modeled with radius, longitude, latitude, and rotaional period.
 The model also uses other input variables which I could solve for using other methods:
 <OL>
@@ -84,7 +84,11 @@ The comparison is done with nonlinear least squares algorithm and it finds a goo
 <p>
 Each time a new model is created one of these comparisons is made a &#967;<sup>2</sup> is determined with lower values signalling a better fit.
 Where a model with a good fit to the data has spot parameters which are most likely to represent the actual structures on the star.
-The model finds better solutions to the data by using a genetic algorithm.
+The model finds better solutions to the data by using a <a href="/GA.hmtl">genetic algorithm</a>.
+</p>
+
+<p>
+  Back to my <a href="/index.html">homepage</a>
 </p>
 
     <!-- FOOTER  -->

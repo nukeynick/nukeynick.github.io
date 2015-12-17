@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Model: spotz</title>
+    <title>Signal Analysis</title>
   </head>
 
   <body>
@@ -30,10 +30,12 @@
 <a id="periods" class="anchor" href="#periods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Periods</h2>
 
     <p>
-    The most important parameter that the model produces is the spot period as it is the crucial variable in determining differential rotation.
+    The most important parameter that the <a href="/model.html">model</a> produces is the spot period as it is the crucial variable in determining differential rotation.
     While the model was very proficient at determining the period I discovered that spot periods tend to persist over long strecthes of time.
     This was unexpected because spots on the Sun rarely last for more than 30 days but the stars in my sample had spots persist for hundreds of days!
     This in itself is a significant scientific discovery but I decided to play around with it a little more to see what else I could learn.
+    </p>
+    <p>
     The first step was to find a quick way of analyzing multiple spot frequencies at once for long stretches of time.
     To achieve this I used Fast-Fourier Transforms (FFT) to analyze the lightcurves, this proved to be effective at determining the two strongest frequencies in the lightcurve.
     I also used a Lomb-Scargle periodigram which basically modeled the data with a simple <em>sin</em> function at reported the two most significant periods.
@@ -69,6 +71,10 @@ An example of synodic points from KIC 6607150.
 The numbered points indicate where the spots have similar longitudes. 
 The lettered points indicate where the spots have the greatest difference in longitude. 
 Since more than two spots are present, the spots are constantly changing in size, and differential rotation is present, the spacing of aligned and non-aligned spots is not the same.
+</p>
+
+<p>
+  Back to my <a href="/index.html">homepage</a>
 </p>
 
     <!-- FOOTER  -->

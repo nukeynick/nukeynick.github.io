@@ -32,6 +32,8 @@
 -->
 
 <p>
+In modern machine learning terms a genetic algorithm is used to solve optimization problems, at this time the most popular method would be gradient descent.
+For this project the genetic algorithm was chosen over gradient descent due to its ability to find high quality solutions and in avoiding local minima.
 A genetic algorithm operates similarly to the evolutionary development of organisms: a population is judged based on its fitness and the best members are allowed to breed and create a new population.
 The new population is then judged by some benchmark (least-squares fitting) and the most fit members (lowest &#967;<sup>2</sup> value) are retained while the rest are discarded.
 This cycle is repeated until it converges on a predefined measure of fitness or until a predetermined number of generations is reached.
@@ -45,15 +47,19 @@ A brief outline of the method follows:
 <LI>Select the best members of the population</LI>
 <LI>Allow these members to asexually breed a new generation</LI>
 <LI>Repeat the process (from step 2)</LI>
-<LI>Stop the process when N generations have passed</LI>
+<LI>Stop the process when N generations have passed or a desired level of fitness is achieved</LI>
 </OL>
 
 <p>
 For my thesis the <a href="/model.html"><em>spotz</em> model</a> employed 200 generations and 250 population members and only the top 10&#37; were retained between generations.
+Adding additional population members allows for exploring the parameter space with greater thoroughness but incurs a greater computation expense.
+The values selected for this project were obtained after some trial and error and worked well for all models.
 For each lightcurve the model was run 50 times in order to guarantee that the best fit to the data could be found.
-This means that 2,500,000 lightcurves were required to test how well one value of <em>k</em> could be used to fit a lightcurve.
+This means that 2,500,000 model lightcurves were required to test how well one value of <em>k</em> could be used to fit a lightcurve.
 Depending on the number of data points in the lightcurve this could take up to 2 and a half hours.
 In total 1429 lightcurves were examined which means over 3.5 billion models were produced!
+The model produced very consistent results so it was not completely necessary to run so many simulations, however I was just a grad student and my committee wanted to leave no doubt.
+Anyone who has been to grad school can attest that you are largely at the mercy of the whims and demands of your advisors.
 </p>
 
 <p>

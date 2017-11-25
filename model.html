@@ -76,7 +76,8 @@ Because of this I sometimes have my differential rotation equations written in t
 
 <p>
 The basic function of the model is to reproduce a star's lightcurve by fitting various parameters and comparing the simulated lightcurve to the real one.
-The comparison is done with a nonlinear least squares algorithm and it finds a good fit by minimizing the sum of squared residuals between the data and the model.
+In machine learning terminology this is a linear regression problem using a customized formula to fit the data.
+The comparison between the data and the model is done with a nonlinear least squares algorithm and it finds a good fit by minimizing the sum of squared residuals between the data and the model.
 </p>
 
 <div style="text-align: center;"><img src="http://latex.codecogs.com/svg.latex?\chi^2%20=%20\sum_{i=1}^N%20\frac{%28I_{o_i}%20-%20I_{c_i}%29^2}{%28\Delta%20I_{o_i}%29^2}" alt="LSQ" border="0"/></div>
@@ -84,7 +85,12 @@ The comparison is done with a nonlinear least squares algorithm and it finds a g
 <p>
 Each time a new model is created one of these comparisons is made and a &#967;<sup>2</sup> is determined, with lower values signalling a better fit.
 Where a model with a good fit to the data has spot parameters which are most likely to represent the actual structures on the star.
-The model finds better solutions to the data by using a <a href="/GA.html">genetic algorithm</a>.
+The best fit parameters are found using a type of gradient descent optimization, the <a href="/GA.html">genetic algorithm</a>.
+</p>
+
+<p>
+It is important to understand that this model is essentially a machine learning project built from scratch.
+This is because at the time I had never heard of machine learning and it had not yet acheived the wide spread public exposure that it now has.
 </p>
 
 <p>
